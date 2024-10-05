@@ -4,9 +4,7 @@ import com.ecom.product.dto.UserDto;
 import com.ecom.product.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class UserController {
@@ -21,5 +19,7 @@ public class UserController {
         ResponseEntity<?> response = userService.signup((userDto));
         return new ResponseEntity<>(response,response.getStatusCode());
     }
+
+    //similarly add an api "/api/login" for login endpoint
 
 }
